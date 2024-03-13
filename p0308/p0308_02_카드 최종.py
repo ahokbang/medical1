@@ -18,7 +18,7 @@ print(num_list)
 # 스페이드 > 다이아 > 하트 > 클로버
 # A > K > Q > J > 10~2
 
-# 카드 1세트를 구gus해서 출력하시오. : 52장
+# 카드 1세트를 구현해서 출력하시오. : 52장
 
 # 선생님 풀이 ********** 꼭 이해하기! **********
 card_list = [[0]*2 for i in range(52)]
@@ -32,7 +32,7 @@ for i in shape_list : # spade, diamond, heart, clover
 # 카드 랜덤 섞기
 random.shuffle(card_list)
 
-arr_num = 0
+arr_num = 0 # 뽑은 숫자
 
 while True :
         
