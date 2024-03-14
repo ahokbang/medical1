@@ -13,18 +13,17 @@
 # 함수를 사용하여 두 수를 입력받아 더하기, 빼기, 곱하기, 나누기 결과값을 출력하시오.
 
 def cal(num1, num2, c) : 
-    sum, sbt, mtp, dvd = 0, 0, 0, 0 # 밖에 있어야 해
-    
     if c == "1" : 
-        sum = num1 + num2
+        result = num1 + num2
     elif c == "2" :
-        sbt = num1 - num2
+        result = num1 - num2
     elif c == "3" :
-        mtp = num1 * num2
+        result = num1 * num2
     elif c == "4" :
-        dvd = num1 / num2        
-    
-    return sum, sbt, mtp, dvd 
+        result = num1 / num2
+        
+    return result
+ 
 
 # 두 수를 입력 받아 리턴 받은 다음, 출력하시오.
 # input은 전역변수에서 받아야 함.
@@ -33,10 +32,21 @@ num2 = int(input("두번째 숫자를 입력하세요. >> "))
 print("1. + 2. - 3. * 4. / ")
 c = input("원하는 사칙연산을 입력하세요. >> ")
 
-
 # 함수호출
-sum, sbt, mtp, dvd  = cal(num1, num2, c)
-print("{}, {} = {},{},{},{}" .format(num1, num2, sum, sbt, mtp, dvd))    
-    
-    
-# 선생님 풀이로 하자! 
+# cal(num1, num2, c)
+result = cal(num1, num2, c)
+
+print("{}, {} 결과값 : {}" .format(num1, num2, result))
+
+
+# 하나로 입력받고 싶을 때
+def cal(num1, num2, c) : 
+    result1 = num1 + num2
+    result2 = num1 - num2
+    result3 = num1 * num2
+    result4 = num1 / num2
+       
+    return result1, result2, result3, result4
+
+result1, result2, result3, result4 = cal(num1, num2, c)
+print("{}, {} 결과값 : {},{},{},{}" .format(num1, num2, result1, result2, result3, result4))
