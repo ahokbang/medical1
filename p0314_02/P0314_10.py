@@ -15,7 +15,7 @@ while True :
     
     k_list = content.split(',')
     k_list[4] = int(k_list[4])
-    sum += k_list[-2]
+    sum += k_list[4]
 print("전국 인원수 : ", sum)
   
 # 3. 파일 닫기

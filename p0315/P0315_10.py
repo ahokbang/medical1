@@ -1,12 +1,48 @@
-# ********** 외우기 **********
+# 파일 추가
+# 1. 파일열기
+f = open("stu.txt", "r", encoding='utf8')
+# 2. 파일읽기
+while True :
+    txt = f.readline()
+    if txt == "" : break
+    txt = txt.strip()
+    stu_list = txt.split(',')
+    print(txt)
+    print(stu_list)
+# 3. 파일닫기
+f.close
 
-students = [{'stuNo': 'S001', 'name': '홍길동', 'kor': 100, 'eng': 99, 'math': 87, 'total': 286, 'avg': 95.33}, 
-            {'stuNo': 'S002', 'name': '유관순', 'kor': 98, 'eng': 93, 'math': 87, 'total': 278, 'avg': 92.67}, 
-            {'stuNo': 'S003', 'name': '이순신', 'kor': 88, 'eng': 76, 'math': 30, 'total': 194, 'avg': 64.67}, 
-            {'stuNo': 'S004', 'name': '김구', 'kor': 100, 'eng': 100, 'math': 100, 'total': 300, 'avg': 100.0}, 
-            {'stuNo': 'S005', 'name': '강감찬', 'kor': 98, 'eng': 85, 'math': 44, 'total': 227, 'avg': 75.67}]
+# 학생성적입력 함수 
+def stu_insert(cnt) :
+    while True :
+        name = input(f"{len(stu_list)+1}번째 학생의 이름을 입력하세요(0. 취소). >> ")
+        if name == "0" :
+            print("이름 입력을 취소합니다.")
+            break
+        student = [] # 데이터 초기화
+        stu_list[0] = cnt
+        stu_list[1] = name 
+        kor = int(input("국어점수를 입력하세요. >> "))
+        stu_list[2] = kor
+        eng = int(input("영어점수를 입력하세요. >> "))
+        stu_list[3] = eng
+        math = int(input("수학점수를 입력하세요. >> "))
+        stu_list[4] = math
+        total = kor + eng + math
+        stu_list[5] = total
+        avg = total / 3
+        stu_list[6] = float("{:.2f}".format(avg))
+        
+        # stu.txt에 추가
+        f = open("stu.txt", "a", encoding='utf8')
+        f.write(f"{stu_list[0]}, {stu_list[1]}, {stu_list[2]}, {stu_list[3]}, {stu_list[4]}, {stu_list[5]}, {stu_list[6]}")
+        f.close()
+        
+        cnt += 1 # 학번 증가
+        # print("입력 데이터 : ", student)
+        
 
-cnt = len(students)+1
+cnt = len(stu_list)+1
 # 학생번호 사용
 
 while True:
@@ -30,29 +66,8 @@ while True:
     
     # 1. 학생성적입력
     if choice == 1 :
-        while True :
-            name = input(f"{len(students)+1}번째 학생의 이름을 입력하세요(0. 취소). >> ")
-            if name == "0" :
-                print("이름 입력을 취소합니다.")
-                break
-            student = {} # 데이터 초기화
-            student["stuNo"] = "S" + "{:03d}" .format(cnt) # ********** 외우기 **********
-            student["name"] = name # 딕셔너리 추가
-            kor = int(input("국어점수를 입력하세요. >> "))
-            student["kor"] = kor
-            eng = int(input("영어점수를 입력하세요. >> "))
-            student["eng"] = eng
-            math = int(input("수학점수를 입력하세요. >> "))
-            student["math"] = math
-            total = kor + eng + math
-            student["total"] = total
-            avg = total / 3
-            student["avg"] = float("{:.2f}".format(avg))
-            # list에 추가
-            students.append(student)
-            cnt += 1 # 학번 증가
-            print("입력 데이터 : ", student)
-            print(students) # 제이슨 타입 
+        stu_insert(cnt) 
+
         
     # 2. 학생성적전체출력
     elif choice == 2 :
@@ -108,7 +123,7 @@ while True:
                         # 합계수정
                         students[chk]["total"] = score + students[chk]["eng"] + students[chk]["math"]
                         students[chk]["avg"] = float("{:.2f}" .format(students[chk]["total"] / 3))
-                        print(f"{s_title[s_input]}점수가 {students[chk][s_1]}점으로 수정이 완료되었습니다.")
+                        print(f"{s_title[s_input]}점수가 {students[chk]["s_1"]}점으로 수정이 완료되었습니다.")
                         print(students[chk])                       
                     elif s_input == 2 :
                         s_1 = "eng"
