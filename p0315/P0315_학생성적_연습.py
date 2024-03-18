@@ -41,4 +41,9 @@ def stu_insert() :
         student["eng"] = eng
         math = int(input("수학점수를 입력하세요. >> "))
         student["math"] = math
+        total = kor + eng + math
+        student["total"] = total
+        avg = total/3
+        student["avg"] = float("{:.2f}" .format(avg))
+        
         
