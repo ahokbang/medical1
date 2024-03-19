@@ -1,4 +1,4 @@
-# import random
+import random
 
 from random import choice # ==> 이렇게하면 random 모듈명을 안붙여도 됨. print(random())과 같이
 
