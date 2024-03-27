@@ -27,8 +27,8 @@ s2 = Student("유관순", 100)
 
 # s1.total = 300
 s1.set_total(400, 'admin')
-# print(s1.total) # error 접근 불가
-print(s1.get_total())
+# print(s1.total) # error 프라이빗으로 인한 접근불가
+print(s1.get_total()) # get_total로 접근 가능
 
 # print(s2)
 # print(s1 == s2) # False

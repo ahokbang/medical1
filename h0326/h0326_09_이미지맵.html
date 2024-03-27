@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지맵</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <img src="img/ball_event.jpg" usemap="#baseball">
+    <map name="baseball">
+        <area shape="rect" coords="340,875,665,980"
+        href="https://www.koreabaseball.com/" target="_blank" alt="KBO 홈페이지">
+        <!-- shape은 사각형(rect): 대각선 꼭지점 2개, 원(circle): 중심점과 반지름, 다각형(poly): 모든 꼭지점 필요 이렇게 3가지가 있어.-->
+        <!-- alt는 이미지 설명-->
+        
+        <area shape="rect" coords="140,345,880,490"
+        href="https://www.ticketlink.co.kr/sports/baseball/62#reservation" target="_blank" 
+        alt="티켓링크 홈페이지">
+        
+        <area shape="circle" coords="510,240,180"
+        href="https://www.ticketlink.co.kr/sports/baseball/62#reservation" target="_blank" 
+        alt="티켓링크 홈페이지">
+        
+        <area shape="poly" coords="330,490,690,490,510,580"
+        href="http://www.naver.com" target="_blank" alt="네이버">
+    </map>
+
+
+</body>
+</html>
+<!-- f5는 캐시에서 가져오는 것이고,
+ctrl+f5는 서버에서 가져오기 때문에 ctrl+f5 사용 권장; 반영 안 될 수도 있음
+이럴 땐, 시크릿모드에서 수행하면 됨.-->
+<!-- 다각형 위치점 작성 시 시계방향 또는 반시계방향으로 작성해야 함. 한 방향-->
