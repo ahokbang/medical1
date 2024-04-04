@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        *{margin: 0; padding: 0;
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        header{width: 100%; height: 35px; padding-top: 7px; margin: 0 auto;}
+
+        .wrap{width: 100%; height: 23px; padding-top: 7px; background: #202020;
+            text-align: left; display: flex; padding-right: 40px; justify-content: right; 
+            font-size: 13px; color: #fff;}
+        .wrap ul{ display: flex; list-style: none; text-align: right; }
+        .wrap .l01{width: 50px; height: 18.67px;}
+        .wrap .l02{width: 59.4px; height: 18.67px;}
+        .wrap .l03{width: 93.77px; height: 18.67px;}
+        .wrap .l04{width: 107.65px; height: 18.67px;}
+
+        .nav{width: 100%; height: 81px; border-bottom: 1px solid #ccc;}
+        .logo{width: 100px; height: 30px;
+        background: url('images/ico_set.png') -320px -385px no-repeat; }
+        
+        .main{width: 1260px; height: 81px; display: flex; justify-content: space-around;}
+        .main ul{list-style: none; font-size: 22px; color: #101010; display: flex;}
+        .main .m01{width: 184.92px; height: 32px;}
+        .main .m02{width: 125.42px; height: 33px;}
+        .main .m03{width: 103.48px; height: 32px;}
+        .main .m04{width: 123.23px; height: 32px;}
+        .main .m05{width: 134.06px; height: 32px;}
+        
+        section{width: 1180px; height: 1836px; margin: 0 auto; padding: 52px 0 140px;}
+        
+        
+        section h1{width: 1180px; height:96px; font-size: 40px; padding-bottom: 36px;
+        border-bottom: 4px solid #202020; color:#101010; font-size:40px; 
+        line-height: 56px; font-weight: 700;}
+
+        .list{margin-top: 40px;}
+        section ul{list-style: none; display: flex; color: #606060; font-size: 24px;
+        display: flex; justify-content: left; font-weight: 700; vertical-align: middle;
+        text-align: center;}
+        
+        .t01{width: 57.11px; height: 41px; }
+        .t02{width: 110.33px; height: 41px; }
+        .t03{width: 227.09px; height: 41px; }
+
+        table{width: 100%; border: 1px solid black; vertical-align: middle;
+        border-collapse: collapse; }
+        table th{font-size: 15px; line-height: 23px; color: #101010; padding: 12px 24px;
+        border-top: 2px solid black; background: #f2f2f2; font-weight: 700;} 
+        table tr, td{font-size: 14px; padding: 20px 24px; line-height: 22px;}
+        table td{border-bottom: 1px solid #f2f2f2;}
+        table .tit{text-align: left;}
+
+        .page{font-size: 14px; color: #606060; display: flex; list-style: none; 
+        justify-content: center; text-align: center;}
+        .p01{width: 40px; height: 40px;}
+        .p02{width: 40px; height: 40px;}
+        .p03{width: 40px; height: 40px;}
+        .p04{width: 40px; height: 40px;}
+        .p05{width: 40px; height: 40px;}
+        .btn_nxt{background: url('images/ico_set.png') 200px 640px no-repeat;}
+        .btn_lst{background: url('images/ico_set.png') 280px 640px no-repeat;}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <ul>
+                <li class="l01">회원가입</li>
+                <li class="l02">로그인</li>
+                <li class="l03">고객행복센터</li>
+                <li class="l04">기프트카드 등록</li>
+            </ul>
+        </div>
+        <div class="nav">
+            <div class="logo"></div>
+
+            <div class="main">
+                <ul>
+                    <li class="m01">COOKIT소개</li>
+                    <li class="m02">COOKIT메뉴</li>
+                    <li class="m03">리뷰</li>
+                    <li class="m04">이벤트</li>
+                    <li class="m05">My쿡킷</li>
+                </ul>
+            </div>
+            <div class="my_menu"></div>
+        </div>
+    </header>
+    <section>
+        <div class="contain">
+            <h1 class="title">고객행복센터</h1>
+            <div calss="list">
+                <ul>
+                    <li class="t01">FAQ</li>
+                    <li class="t02">공지사항</li>
+                    <li class="t03">지정일배송/이용안내</li>
+                </ul>
+            </div>
+            <table>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>등록일</th>
+                </tr>
+                <tr>
+                    <td>199</td>
+                    <td class="tit">CJ ONE포인트 및 기프트카드 사용 일시중단 안내 [3/26(화) 02:00~07:00] </td>
+                    <td>2024-03-21</td>
+                </tr>
+                <tr>
+                    <td>198</td>
+                    <td class="tit">택배시스템 서버 점검에 따른 서비스 일시 불가 안내 [3월17일 02:30 ~ 06:30]</td>
+                    <td>2024-03-06</td>
+                </tr>
+                <tr>
+                    <td>197</td>
+                    <td>쿡킷 서버 점검에 따른 서비스 일시 불가 안내 [2/24(토)00:00~06:00]</td>
+                    <td>2024-02-20</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="page">
+                <ul>
+                    <li class="p01">1</li>
+                    <li class="p02">2</li>
+                    <li class="p03">3</li>
+                    <li class="p04">4</li>
+                    <li class="p05">5</li>
+                    <li class="btn_nxt"></li>
+                    <li class="btn_lst"></li>
+                </ul>
+            </div>
+        </section>
+        </div>
+
+</body>
+</html>
+
