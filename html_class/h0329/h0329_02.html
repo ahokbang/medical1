@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #d01{width: 300px; height: 300px; border: 30px dotted black; 
+        /* padding: 30px;*/ 
+        background: url('cew.jpg') no-repeat;
+        background-size: 400px;
+        /* cover: 짧은 거 기준으로 
+        contain: 긴거 기준으로 
+        100%: 꽉 채우는데 이미지가 늘어날 수 있어
+        200%: 이미지가 작아져
+        */
+        background-position: -45px 0;
+        /*                     x축  y축
+        아래와 같이 쓸 수 있어.
+        background: url('cew.jpg') -80px 0 no-repeat; 
+        
+        
+        background: 3가지 속성을 묶어서 표현 가능
+        background-image: url('cew.jpg');
+        background-position: 80px, 0;
+        background-repeat: no-repeat;
+        
+        */
+        background-origin: content-box;
+        }
+
+        div{width: 1200px; height: 900px; border: 5px solid black;
+        margin: 0 auto; background: url('back1.gif') repeat;
+        /* background-image: url('back1.gif');
+        background-repeat: no-repeat;
+        두 코드를 하나로 합칠 수 있음. 
+        background: url('back1.gif') no-repeat;*/ 
+        
+        }
+    </style>
+</head>
+<body>
+    <div id="d01"></div>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+    <script>
+        var a = 10;
+        var b = 2.5;
+        var c = "안녕";
+        var a = "선언";
+        var d = "100";
+        var e = true; // True는 파이썬 자바스크립트에서는 true!!
+        var f 
+        console.log("a의 타입 : "+typeof(a)) //number
+        console.log("b의 타입 : "+typeof(b)) //number
+        console.log("c의 타입 : "+typeof(c)) //string
+        console.log("d의 타입 : "+typeof(d)) //string
+        console.log("e의 타입 : "+typeof(e)) // boolean  ==>파이썬에서도 boolean인데, 파인썬은 줄여서 씀
+        console.log("a+b :"+(a+b)) //12.5
+        console.log("a+b :"+(a+c)) //파이썬에서만 error 
+                                   // 자바스크립트 등 모든 언어에서는 10안녕,  이후 타입이 string타입으로 변경
+        console.log("a+b :"+(a+d)) //10100 ==> d의 경우 number로 형변환하여 계산 가능
+        console.log('a+d 타입변환 :'+(a+Number(d))) //110  ** Number는 앞글자 대문자 유의!
+        
+        var f;
+        console.log("f 타입 : "+typeof(f)); // undefined 
+        f = 10;
+        console.log("f 타입 : "+typeof(f)); // number
+        f = "반가워";
+        console.log("f 타입 : "+typeof(f)); // string
+        g = 1000;
+        console.log("g의 타입 : "+typeof(g)); // var 안 붙여도 type 확인 가능
+        console.log("a+b :"+(a+e)) //11
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<!--모든 언어는 다 소문자, 파이썬만 대문자. 헷갈릴 수 있어
+
+변수선언 let, const로도 할 수 있어
+자바스크립트는 개발 시 공용으로 사용하는 언어, 하나의 변수에 대해서
+여러명이 선언 및 사용할 경우 var는 문제가 있음. 그래서 최근 let을 권장 -->
