@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 정보</title>
+    <style>
+        *{margin: 0; padding: 0;}
+    </style>
+    <script>
+        // 현재까지 몇일(몇시간 몇분) 남았는지 출력하시오.
+        var today = new Date();
+        var d_day = new Date(2024,9,31);
+
+        var diffDate = d_day.getTime() - today.getTime();
+        
+        document.write("<h2>10월 31일까지 남은 일시분초</h2>");
+        document.write("현재 밀리세컨드 차이 : ", diffDate, "<br>");        
+
+        // 1000초 * 60초 * 60분 * 24시간
+        //일자 확인 방법
+        var date_result = Math.floor(diffDate/(1000*60*60*24));
+        var remain_date = diffDate%(1000*60*60*24);
+        document.write("일자 : ", date_result,"<br>");
+        document.write("현재 남은 일자 : ",remain_date,"<br>");
+        // 시간 확인 방법
+        var hour_result = Math.floor(remain_date/(1000*60*60));
+        var remain_hour = remain_date%(1000*60*60);
+        document.write("시간 : ", hour_result,"<br>");
+        document.write("현재 남은 시간 : ",remain_hour,"<br>");
+        // 분 확인 방법
+        var min_result = Math.floor(remain_hour/(1000*60));
+        var remain_min = remain_hour%(1000*60);
+        document.write("분 : ", min_result,"<br>");
+        document.write("현재 남은 분 : ",remain_min,"<br>");
+        //초 확인 방법
+        var sec_result = Math.floor(remain_min/(1000));
+        var remain_sec = remain_min%(1000);
+        document.write("초 : ", sec_result,"<br>");
+        document.write("현재 남은 초 : ",remain_sec,"<br>");
+
+        
+
+        
+        /* 현재날짜까지 남은 일자(내가한 거)
+        var today = new Date(); // 현재 날짜 객체; 현재 날짜 가져오기
+        var nowYear = today.getFullYear();
+        var nowMonth = today.getMonth();
+        var nowDate = today.getDate();
+        var nowDay = today.getDay();
+
+        var nowYear = d_day.getFullYear();
+        var nowMonth = d_day.getMonth();
+        var nowDate = d_day.getDate();
+        var nowDay = d_day.getDay();
+        var f_day;
+
+        var diffDate = d_day.getTime() - today.getTime();
+        var d_result = Math.ceil(diffDate/(1000*60*60*24));
+        var h_result = Math.ceil((d_result%24)/24);
+        var m_result = Math.ceil((d_result%24)/60);
+        var s_result = Math.ceil((h_result%60)/60);
+        document.write("현재까지 남은 일자 : ", d_result, "일 <br>");
+
+        document.write("현재까지", d_result, "일", h_result, "시간", m_result, "분", s_result, "초 남았습니다. <br>");
+        */ 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
