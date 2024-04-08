@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string(문자열)</title>
+    <script>
+        // ********** 꼭 알아야 해!! **********
+        /*
+        var num_str = '12345';
+        document.write(num_str.substring(0,3)+"<br>");
+        document.write(num_str.substring(2)+"<br>");
+        document.write(num_str.substring(-1)+"<br>");
+        */
+
+        // 010-1234-5678을 입력받으면, 010-1234-****로 출력
+        /* 내가 한 거! 맞았어!
+        var phone_no = prompt("휴대전화 번호를 입력하세요.")
+        //document.write(phone_no)
+        document.write(phone_no.substring(0,9)+"****")
+        */
+
+        /// 선생님
+        while(true){
+            var in_no = prompt("전화번호를 입력하세요(예: 010-1234-5678).")
+            console.log(in_no.length);
+            if(in_no.length!=13){
+                alert("하이픈을 포함하여 13자리 전화번호를 입력하셔야 합니다.")
+                continue;
+            }else{
+                break;
+            }
+        }
+        var tel = in_no.substring(0,9); 
+        var tel2 = tel+"****";
+        document.write(tel2+"<br>")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

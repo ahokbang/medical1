@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue</title>
+    <script>
+    /* 3, 5의 배수를 제외하고 구구단을 출력하시오.
+       예) 2단의 경우, 2*1, 2*2, 2*4, 2*7, 2*8
+    */
+    
+    for(var i=2; i<10; i++){
+        for(var j=1; j<10; j++){
+            if(j%3==0 || j%5==0){
+                continue;
+            }
+        document.write(i + "*" + j + "=" + i*j+"&nbsp&nbsp")
+        }
+        document.write("<br>")
+    }
+    // 선생님
+    for(var i=2; i<10; i++){
+        for(var j=1; j<10; j++){
+            if(!(j%3==0 || j%5==0)){
+                document.write(i + "*" + j + "=" + i*j+"&nbsp&nbsp")
+            }
+        }
+        document.write("<br>")
+    }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
