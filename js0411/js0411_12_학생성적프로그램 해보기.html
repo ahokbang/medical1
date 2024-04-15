@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>해보기</title>
+    <script>
+        $(function(){
+            
+            let no = [1,2,3,4,5,6,7,8,9,10];
+            let name = [aaa, bbb, ccc, Sholom, Marja, Rebbecca, Dotti, Aleta, Langston, Bryan];
+            let pw = [1111,2222,3333,5462,7238,5127,6703,6602,3334,5543];
+            let gender = [Male, Male, Male, Male, Female, Female, Female, Female, Male, Male];
+            
+            let mdata = "";
+            for(let i=0; i<10; i++){
+                mdata +="<tr id='"+no[i]+"'>"
+                mdata +="<td>"+no[i]+"</td><td>"+name[i]+"</td><td>"+pw[i]+"</td><td>"+gender[i]+"</td>";
+                mdata +="<td><button class='delBtn'>Del.</button></td>";
+                mdata +="</tr>";
+            }
+            $("tbody").html(mdata);
+
+        });
+    </script>
+    <style>
+        section{width: 1200px; margin: 50px auto;}
+        h2{text-align: center;}
+        table{border-collapse: collapse; width: 1200px;}
+        table, th, td{border: 1px solid black; text-align: center;}
+        th{height: 45px; background: #efefef;}
+        td{height: 40px;}
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Member</h2>
+        <table>
+            <colgroup>
+                <col width="*">
+                <col width="*">
+                <col width="*">
+                <col width="*">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>PWw</th>
+                    <th>Gender</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>aaa</td>
+                    <td>1111</td>
+                    <td>M</td>
+                    <td><button class="delBtn">Del.</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+    </section>
+</body>
+</html>

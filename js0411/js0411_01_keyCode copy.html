@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>제이쿼리</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        div{width: 500px; height: 200px; border: 3px solid black; background: yellow;
+        font-size: 20px; text-align: center; 
+        overflow: auto;} /* 자동 스크롤*/
+    </style>
+    <script>
+        // 제이쿼리 선언문
+        $(function(){
+            // 제이쿼리 이벤트호출
+            $("#xtx").keyup(function(){
+                if(window.event.keyCode == 13){
+                    console.log("enter key 누름");
+                    //$("#main").text($("#txt").val()); // input 박스에 있는 글자를 div에 넣어줌.
+                    // 카카오톡 처럼 할 수 있어.
+                    $("#main").append("루나(ID) : "+$("#txt").val()+"<br>"); 
+                    $("#txt").val(""); // input 박스에 있는 글자를 지워줌.
+                }
+            });
+            
+        }); // query ==> 중괄호가 많아지니까 이렇게 써주는 게 좋아. 헷갈리지 않게
+        
+        // 자바스크립트 함수 선언 ==> 제이쿼리 안에 넣으면 실행 안돼
+        function dBtn(){
+            // alert("test");
+            // 자바스크립트 선택자 활용
+            // document.querySelector("#main").style.background = "blue";
+            // document.getElementById("main")
+
+            // 제이쿼리 선택자 활용 ==> 자바스크립트 선택자 활용한 것보다 더 간단
+            // $("#main").css("background", "blue");
+
+            // 자바스크립트 input 내용 ==> value, 태그에 글자 innerText
+            // 제이쿼리 input 내용 ==> val(), 태그에 글자를 넣고 싶을 때는 text()
+            
+            // keyCode - 13은 Enter key
+            if(window.event.keyCode == 13){
+                    console.log("enter key 누름");
+                    //$("#main").text($("#txt").val()); // input 박스에 있는 글자를 div에 넣어줌.
+                    // 카카오톡 처럼 할 수 있어.
+                    $("#main").append("루나(ID) : "+$("#txt").val()+"<br>"); 
+                    $("#txt").val(""); // input 박스에 있는 글자를 지워줌.
+                }
+        }
+        
+
+    </script>
+</head>
+<body>
+    <div id="main"> aaa </div>
+    <input type="text" name="txt" id="txt"><br>
+    <button>확인</button>
+</body>
+</html>
+
+
+<!-- 확인 필요-->
