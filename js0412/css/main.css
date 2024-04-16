@@ -2,7 +2,7 @@
 #main{width: 1200px; margin: 50px auto;}
 #main h2{text-align: center; margin-bottom: 20px;}
 #main>table{border-collapse: collapse; width: 1200px;}
-#main table,th,td{}
+/* #main table,th,td{} */
 #main th{height: 45px; background: #efefef; text-align: center; 
 border: 1px solid black; }
 #main td{height: 40px; text-align: center; border: 1px solid black; }

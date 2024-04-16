@@ -51,9 +51,9 @@
                 let i_no = Math.max.apply(null, no)+1;
                 no.push(i_no);
                 let i_name = $("#name").val();
-                let i_kor = Numbers($("#kor").val());
-                let i_eng = Numbers($("#eng").val());
-                let i_math = Numbers($("#math").val());
+                let i_kor = Number($("#kor").val());
+                let i_eng = Number($("#eng").val());
+                let i_math = Number($("#math").val());
                 let i_total = i_kor+i_eng+i_math;
                 let i_avg = (i_total/3).toFixed(2);
 
