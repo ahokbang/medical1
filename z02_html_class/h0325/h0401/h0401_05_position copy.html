@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .main{width: 900px; height: 800px; border: 3px solid black;
+        margin: 50px auto;}
+        .main{position: relative;}
+        /* position: absolute; => 부모의 기준점을 기준으로 함. 
+        부모의 기준점이 없으면 그 위 부모를 따르고 위 부모도 없으면 그 위의 부모...
+        계속 없으면 body까지 감*/
+        .c01{background: green; position: absolute; left: 0; top: 0;} 
+        .c02{background: blue; position: relative; left: 0; top: 0; }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="c01"> </div>
+        <div class="c02"> </div>
+
+    </div>
+</body>
+</html>
+
+

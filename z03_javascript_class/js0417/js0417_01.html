@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>쿡킷</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none; display: flex; width: 1000px; margin: 20px auto;}
+        li{width: 180px; height: 40px; border: 1px solid black; text-align: center;
+        line-height: 40px; margin-left: 10px; background: white; color: black; font-weight: 400;}
+        /* 
+        li:hover{background: #202020; color: white; font-weight: 700;} 
+        */
+        /* 단, hover의 단점은 자기 자신만 적용돼*/
+        .on{background: #202020; color: white; font-weight: 700;}
+        /* script 힘드니까 off 만들어 */
+        .off{background: white; color: black; font-weight: 400;}
+        #main{width: 1000px; height: 300px; border: 1px solid black; margin: 20px auto;}
+    </style>
+    <script>
+        $(function(){
+            // li 클릭
+            $("li").click(function(){
+                $(this).toggleClass("on");
+            }); // li.click(function)
+            
+            // li.mouseleave(function)
+
+            /*
+            // addClass 활용하면 더 간편!
+            $("li").mouseenter(function(){
+                $(this).addClass("on");
+            }); // li.mouseenter(function)
+            $("li").mouseleave(function(){
+                $(this).removeClass("on");
+            }); // li.mouseleave(function)
+            */ 
+
+            /* 
+            main 색도 같이 변경 
+            $("li").mouseenter(function(){
+                $("#main").css({"background":"#202020","color":"white","font-weight":"400"});
+            }); // li.mouseenter(function)
+            $("li").mouseleave(function(){
+                $("#main").css({"background":"white", "color":"black","font-weight":"400"});
+            }); // li.mouseleave(function)
+            */
+                
+            
+            /* 이거보다 style에서 hover 주는 게 더 간편 
+            $("li").mouseenter(function(){
+                // mouseenter는 mouse가 올라갔을 때, leave는 떠나갔을 때
+                // 또는 $("li").hover
+                $(this).css({"background":"#202020","color":"white","font-weight":"400"});
+            }); // li.mouseenter(function)
+            $("li").mouseleave(function(){
+                $(this).css({"background":"white", "color":"black","font-weight":"400"});
+            }); // li.mouseleave(function)
+            */
+        }); // jquery
+    </script>
+</head>
+<body>
+    <ul>
+        <li>COOKIT소개</li>
+        <li>COOKIT 메뉴</li>
+        <li>리뷰</li>
+        <li>이벤트</li>
+        <li>MY쿡킷</li>
+    </ul>
+    <div id="main"></div>
+</body>
+</html>

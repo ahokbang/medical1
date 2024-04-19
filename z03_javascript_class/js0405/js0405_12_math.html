@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈</title>
+    <script>
+        // 숫자 3개를 입력 받아, 큰 순서대로 출력하시오.
+        var num1 = Number(prompt("첫번째 숫자를 입력하세요."));
+        var num2 = Number(prompt("두번째 숫자를 입력하세요."));
+        var num3 = Number(prompt("세번째 숫자를 입력하세요."));
+        var maxNo = Math.max(num1, num2, num3);
+        var minNo = Math.min(num1, num2, num3);
+        var midNo = (num1+num2+num3)-(maxNo+minNo); 
+
+
+        // 최대값
+        document.write("최대값 : "+maxNo+"<br>");
+
+        // 최소값
+        document.write("최소값 : "+minNo+"<br>");
+
+        // 오름차순: 삼항식 또는 if문으로 할 수 있음. 또는 배열에 넣어서 사용
+        document.write("오름차순 : "+maxNo+midNo+minNo+"<br>");
+        
+        /*
+        // 삼항식 사용하여 중간값 구하기: 좋은 방법 아니야. 문제가 있어.
+        var result;
+        result = (num1>num2)?((num1>num3)?num3:num1):((num2>num3?num3:num2));
+        document.write("오름차순(삼항식) : ")
+        */
+
+        var arr = [8, 7, 4]; // 첫번째 숫자가 한자리 숫자여야 해. 10-> 8
+        document.write(arr.sort()+"<br>"); //순차정렬
+        document.write(arr.reverse()+"<br>"); // 역순
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

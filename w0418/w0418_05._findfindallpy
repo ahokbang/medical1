@@ -1,0 +1,29 @@
+import requests
+from bs4 import BeautifulSoup
+url = "https://finance.naver.com/sise/lastsearch2.naver"
+headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"}
+res = requests.get(url, headers)
+res.raise_for_status()
+
+soup = BeautifulSoup(res.text,"lxml")
+# print(soup)
+
+# 태그로 찾는 방법, title, get_text(), text, a.attrs, a["href"] ===> w0418_04.py
+# 클래스로 찾는 방법 ==> w0418_05.py ==> find, find_all, class:""
+# print(soup.find("tbody")) # None, 못 찾아.
+
+# find: 태그정보 찾기 함수, class로 찾는 방법
+# print(soup.find(attrs={"class":"box_type_l"})) 
+# print(soup.tr) # ==> 첫번째 tr값이 나와
+# print(soup.find("tr",attrs={"class":"type1"}))
+print(soup.find("tr",{"class":"type1"})) # attr 생략 가능
+type_tr = soup.find("tr",{"class":"type1"})
+print("th : ", type_tr.th) # 1개만 - 1번째 만나는 th 태그를 찾아줌. ==> 첫번째 th 출력
+print(type_tr.find_all("th")) # 모든 것 - 모든 th 태그 찾아줌 ==> 모든 th 태그 다 찾고 싶을 때
+ths= type_tr.find_all("th")
+for th in ths:
+    print("제목 : ", th.text)
+
+
+
+

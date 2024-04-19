@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감연산자</title>
+    <script>
+        var num1 = 10;
+        var num2 = 20;
+        var num3 = 0;
+        var result;
+
+        num1 --; // num1 = num1 - 1;
+        document.write(num1+"<br>") //9
+
+        num1 --;
+        document.write(num1+"<br>") //8
+
+        num1++;
+        document.write(num1+"<br>") //9
+
+        num3 = ++num1; // 현재 num1 = 9
+        document.write("num3 : "+num3+"<br>"); //10 ====> ++는 +1하라는 의미이므로, 9(=num1)에 1을 더했으므로 10
+        document.write("num1 : "+num1+"<br>");
+
+        num3 = num1++; // num1, num3는 현재 10
+        document.write("num3 : "+num3+"<br>") // 10
+        document.write("num1 : "+num1+"<br>") // 11 ===> num1(10)값을 먼저 num3에 넣고 나서 num1에 1을 증가시켜라(++)이므로 11
+    
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

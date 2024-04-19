@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+    <script>
+        var arr1 = ['홍길동', '유관순', '이순신', '김구','감감찬'];
+        arr1.pop(); // 맨 뒤 데이터 삭제
+        arr1.shift(); // 맨 앞 데이터 삭제
+        //slice(): 지정(해당) 데이터 삭제, index 위치 데이터 개수 삭제
+        arr1.slice(1,1); // var arr1 = ['유관순', '이순신', '김구', '강감찬'] 이므로 이순신 삭제
+        // 1번째 데이터 1개 삭제
+        
+        for(var i=0; i<arr1.length;i++){
+            document.write(arr1[i], "<br>");
+        }
+
+        document.write("-------------------------------------------------<br>")
+
+        var arr2 = ['홍길동', '유관순', '이순신', '김구','강감찬', '김유신', '홍길자'];
+        for(var i=0; i<arr2.length;i++){
+            document.write(arr2[i], "<br>");
+        }
+        document.write("-------------------------------------------------<br>")
+        var arr3 = arr2.slice(2,5); //슬라이싱; 주소 2번부터 5번 앞까지 가져옴
+        document.write("-------------------------------------------------<br>")
+        for(var i=0; i<arr3.length;i++){
+            document.write(arr3[i], "<br>");
+        }
+        arr2.push('홍길순');
+        document.write("-------------------------------------------------<br>")
+        arr2.pop(); 
+        arr2.shift(); 
+        arr2.slice(1,2);
+        for(var i=0; i<arr2.length;i++){
+            document.write(arr2[i], "<br>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

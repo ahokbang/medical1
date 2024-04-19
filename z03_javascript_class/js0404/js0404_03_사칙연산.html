@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사칙연산</title>
+    <script>
+        var num1 = 15;
+        var num2 = 2;
+        var result;
+        result = num1 + num2;
+        // 화면출력
+        document.write("num1 + num2 결과값 : ", result+"<br>"); // ,도 되는데 간혹 에러 발생될 수 있으므로 + 권장
+        document.write("num1 + num2 결과값 : "+result+"<br>"); // +"<br>" : 한칸 띄기
+        result2 = num1 - num2;
+        document.write("num1 - num2 결과값 : "+result2+"<br>")
+        document.write("<h1>안녕하세요.</h1>"); // 코드를 적용할 수 있음. fotm도 만들 수 있음
+        result3 = num1 * num2;
+        document.write("num1 * num2 결과값 : "+result3+"<br>")
+        result4 = num1 / num2;
+        document.write("num1 / num2 결과값 : "+result4+"<br>")
+        result5 = num1 % num2;
+        document.write("num1 % num2 결과값 : "+result5+"<br>")
+        document.write("result4 결과값 : "+typeof(result4)+"<br>")
+        // result4는 실수, 정수로 바꾸려면, parseInt
+        result4 = parseInt(result4); //정수형 숫자
+        document.write("num1 / num2 결과값 : "+result4+"<br>") // 7.5가 아니라 7
+        document.write("result4 결과값 : "+typeof(result4)+"<br>")
+        // 실수형 숫자변환: parseFloat
+
+    </script>
+</head>
+<body>
+    <!-- body(화면창)을 documen라고 해.-->
+</body>
+</html>
+
+<!-- 결과값 확인할 수 있는 방법 3가지
+1. cosole
+2. document.write
+3. alert
+-->
