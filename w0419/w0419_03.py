@@ -71,7 +71,6 @@ for i,li in enumerate(lis[0:20]) :
     # 평가인원수 200명 이상인 사람 출력 - 정수형으로 형변환
     if int(li.find("span",{"class":"rating-total-count"}).text[1:-1]) < 200 :
         continue
-    
     print("li class : ", li["class"])
     # 왼쪽, 오른쪽 공백제거
     print("상품명 : ", li.find("div",{"class":"name"}).text.strip())
