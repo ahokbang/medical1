@@ -15,7 +15,7 @@ with open("auction_ntb.html", 'w', encoding='utf8') as f:
 
 # print(soup.prettify())
 
-
+# 내 코드
 # 이름, 가격, 평점, 후기 개수, (이미지) 가져오기
 div_search = soup.find("div",{"class":"component component--item_card type--general"})
 # print(div_search)
