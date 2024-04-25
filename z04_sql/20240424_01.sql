@@ -93,7 +93,7 @@ where no=10;
 update stu_score set avg=round(total/3,3);
 select * from stu_score;
 
--- months_between(날짜1, 날짜2) : 2개의 날짜에서 월 간격을 확인
+-- months_between(날짜1, 날짜2) : 2개의 날짜에서 월 간격을 확인 [암기]
 select hire_date, months_between(sysdate, hire_date) from employees;
 select hire_date, floor(months_between(sysdate, hire_date)), trunc(sysdate-hire_date,2) from employees;
 
@@ -108,7 +108,7 @@ select sysdate, round(sysdate, 'd') from employees;
 
 select sysdate, trunc(sysdate, 'month') from employees;
 
--- 날짜 기준으로 현재일, 처음일, 마지막일
+-- 날짜 기준으로 현재일, 처음일, 마지막일 [암기]
 select sysdate 현재일, trunc(sysdate, 'month') 월의첫일 , last_day(sysdate) 월의마지막일 from dual;
 
 -- 특정 요일의 날짜를 확인 
