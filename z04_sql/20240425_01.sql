@@ -45,8 +45,7 @@ select to_number(replace('123,456,789',',','')+replace('156,789',',','')) from d
 select to_number(replace('123,456,789',',',''))+to_number(replace('100,000',',','')) from dual;
 -- 아래 방법이 replace 대체
 select to_number('123,456,789','999,999,999') from dual;
--- 파일 확인하기
-select to_char(to_number('123,456,789','999,999,999')+to_number('100,000','999,999')) from dual;
+select to_char(to_number('123,456,789','999,999,999')+to_number('100,000','999,999'),'999,999,999') from dual;
 
 
 select to_char(salary, '999,999') from employees;
