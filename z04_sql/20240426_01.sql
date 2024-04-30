@@ -31,7 +31,7 @@ select * from emp01 order by emp_id desc;
 
 -- 데이터 1개 추가
 insert into emp01 values(
-207, '홍길동','2024-04-26'
+ 207, '홍길동','2024-04-26'
 );
 
 select * from emp01 order by emp_id desc;
@@ -320,18 +320,24 @@ add constraint fk_deptno foreign key(deptno)
 references dept01(deptno)
 ;
 
+select * from dept01;
+
+alter table emp01
+modify(deptno number(6));
+
 -- dept01 테이블 생성
 create table dept01(
-deptno number(2) primary key,
+deptno number(6) primary key,
 dept_name varchar2(80)
 );
 
-select * from departments;
+-- select * from departments;
 
-insert into dept01 (deptno, dept_name)
-select department_id, department_name from departments;
+-- insert into dept01 (deptno, dept_name)
+-- select department_id, department_name from departments;
 
 desc departments;
+
 -- 컬럼의 타입 변경
 alter table dept01
 modify (deptno number(6));
@@ -342,8 +348,9 @@ modify (dept_name varchar2(80));
 insert into dept01 (deptno, dept_name)
 select department_id, department_name from departments;
 
+-- 컬럼 타입 변경
 alter table emp01
-modify (deptno number(8));
+modify (dept_name number(8));
 
 desc member;
 
@@ -433,20 +440,23 @@ delete board where bno =5;
 
 -- 외래키 삭제
 alter table board drop constraints fk_id;
-alter table comments drop constraints fk_;
+alter table comments drop constraints fk_bno;
 
 select * from board;
 select * from comments;
 
 delete board where bno=1;
 
-delete comments where cno=2; -- 먼저 삭제해야 아래가 삭제 돼(primary key 먼저 삭제해야 foreign key 삭제 가능)
-delete board where bno=1;
+alter table board
+add constraints fk_id foreign key(id)
+references member(id);
 
 -- fk_cno가 삭제되도록 함.
-alter table board 
-add constraint fk_cno foreign key(cno)
-references comments(cno) on delete cascade;
+alter table comments 
+add constraint fk_bno foreign key(bno)
+references comments(bno) on delete cascade;
+
+delete comments where cno=2; -- 먼저 삭제해야 아래가 삭제 돼(primary key 먼저 삭제해야 foreign key 삭제 가능)
 
 
 -- check : 제약조건 특정값의 범위, 특정값만 입력되도록 함
@@ -455,7 +465,7 @@ empno number(4) primary key,
 ename varchar2(20) not null,
 job varchar2(9) default '0001' , -- column에 데이터를 넣지않으면 자동으로 0001이 저장.
 sal number(7,2) check (sal between 2000 and 20000),
-gender varchar2(6) check(gender in('남자','여자))
+gender varchar2(6) check(gender in('남자','여자'))
 );
 
 insert into emp(empno, ename, job, sal, gender) values(
