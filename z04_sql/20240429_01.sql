@@ -22,7 +22,7 @@ mdate date default sysdate
 );
 
 -- [암기] 데이터 가공(입력, 출력, 수정, 삭제) 함수 외우기! insert, select, update, delete
-
+-- 데이터 입력, 출력, 수정, 삭제 부분
 insert into member(memNo, id, pw, name, gender, mdate) values(
 member_seq.nextval, 'aaa', '1111', '홍길동', '남자', sysdate
 );

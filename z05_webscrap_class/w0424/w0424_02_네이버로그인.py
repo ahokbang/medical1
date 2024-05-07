@@ -9,7 +9,7 @@ headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 
 url = "https://www.naver.com"
 
-# 크롬브라우저 열기
+# 크롬부라우저 열기
 browser = webdriver.Chrome()
 # 네이버 페이지 이동
 browser.get(url)
