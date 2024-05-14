@@ -70,3 +70,25 @@ s_data
 # replace : 문자열 처리, strip: 공백제거
 
 # &, |
+
+
+
+# 위치 지정해서 데이터를 입력하면 수정
+df.iloc[0,-1] = df.iloc[0].sum()
+
+
+# 총합 점수가 300점이 넘으면 합격, 
+df[df['총합']>300]
+df.loc[df['총합']>300,'결과'] = '합격'
+df
+
+# 학년별 인원수
+school['학년'].value_counts().loc['구로고']
+
+# 학년별 퍼센트
+(school['학년'].value_counts(normalize=True).loc['구로고']*100).astype(str)+'%'
+
+
+# 한 주문에 10달러 이상 사용한 주문 번호를 출력하시오. 
+df_sum = df.groupby('order_id').sum()
+df_sum[df_sum['item_price']>=10].sort_values('item_price', ascending=False).head()
